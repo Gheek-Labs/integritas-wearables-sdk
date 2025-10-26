@@ -34,7 +34,7 @@ verified_data = sdk.get_verified_data()
 ```bash
 pip install wearables-sdk
 # OR
-pip install git+https://github.com/yourusername/wearables-sdk.git
+pip install git+https://github.com/Gheek-Labs/integritas-wearables-sdk.git
 ```
 
 ## Requirements
