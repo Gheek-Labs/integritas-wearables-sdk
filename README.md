@@ -1,4 +1,4 @@
-# Wearables SDK (Hardened Release)
+# Wearables SDK
 
 Secure edge timestamping for wearable devices using Integritas Minima Global API with SHA3 hashing.
 
