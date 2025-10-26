@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="wearables-sdk",
-    version="1.0.0",
+    version="1.1.0",
     author="Wearables SDK Team",
     author_email="dev@wearables-sdk.example.com",
     description="Secure edge timestamping for wearable devices",
@@ -29,7 +29,7 @@ setup(
     ],
     python_requires=">=3.6",
     install_requires=[
-        "requests>=2.25.0",
+        "requests>=2.31.0",
     ],
     extras_require={
         "dev": ["pytest>=6.0", "black", "flake8"],

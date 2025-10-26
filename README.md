@@ -1,4 +1,4 @@
-# Wearables SDK
+# Wearables SDK (Hardened Release)
 
 Secure edge timestamping for wearable devices using Integritas Minima Global API with SHA3 hashing.
 
@@ -34,7 +34,7 @@ verified_data = sdk.get_verified_data()
 ```bash
 pip install wearables-sdk
 # OR
-pip install git+https://github.com/Gheek-Labs/integritas-wearables-sdk.git
+pip install git+https://github.com/yourusername/wearables-sdk.git
 ```
 
 ## Requirements
@@ -59,13 +59,20 @@ pip install git+https://github.com/Gheek-Labs/integritas-wearables-sdk.git
 
 ## Examples
 
-Check the [examples](examples/) directory for complete use case implementations:
+See the `examples/` directory.
 
-- Health Monitoring
-- Fitness Tracking  
-- Environmental Sensing
-- Industrial Safety
-- Research Studies
+---
+
+## Security Hardening (This Release)
+- Enforced compact JSON with `allow_nan=False` for deterministic hashing
+- Optional **TLS certificate pinning** via SHA-256 fingerprint preflight
+- `on_queue_overflow` hook to react to queue pressure (reduce sampling, log, persist)
+- Safe auto-shutdown in `__del__` to avoid background thread leaks
+- `requests>=2.31.0` and Python `.gitignore` included
+- New helpers in `wearables_sdk.security`:
+  - `load_api_key()` (env or secure file)
+  - `ensure_json_compact()`
+  - `sha256_cert_fingerprint()`, `matches_any_fingerprint()`
 
 ## License
 
